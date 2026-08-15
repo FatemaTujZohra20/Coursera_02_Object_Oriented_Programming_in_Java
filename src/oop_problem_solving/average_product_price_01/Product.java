@@ -26,6 +26,7 @@ public class Product {
     }
     
     // Display Product Information
+    @Override
     public String toString() {
         return "Product Name - " + this.productName
                 + "\nProduct Price - " + String.format("%.2f", this.productPrice);
