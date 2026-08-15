@@ -21,5 +21,27 @@ public class EmployeeSalaryCalculator {
         
         return 0;
     }
+    
+    public static float calculateAverageSalaryByDepartment(Employee[] employees, String department){
+        
+        float totalEmployeeSalary = 0;
+        int totalEmployeeCount = 0;
+        
+        for(int i = 0; i < employees.length; i++){
+            if (employees[i] != null){
+                if (employees[i].getDepartment().equals(department)) {
+                    totalEmployeeSalary += employees[i].getSalary();
+                    totalEmployeeCount++;
+                }
+            }
+        }
+        
+        if (totalEmployeeCount > 0){
+            return totalEmployeeSalary / totalEmployeeCount;
+        }
+        
+        return 0;
+        
+    }
 
 }

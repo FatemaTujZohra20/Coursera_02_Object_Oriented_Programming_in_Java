@@ -38,6 +38,12 @@ public class EmployeeSalaryApp {
         
         System.out.println("Total Average Salary: "
                             + String.format("%.2f", totalAverageSalary));
+        
+        
+        float engineeringAverage =
+                EmployeeSalaryCalculator.calculateAverageSalaryByDepartment(employees, "Engineering");
+        
+        System.out.println("Engineering Average Salary: " + String.format("%.2f", engineeringAverage));
 
     }
 }
