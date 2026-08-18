@@ -47,10 +47,10 @@ public class DepartmentSalaryApp {
             }
         }
         
-        float totalSalaryByDepartment =
-                DepartmentSalaryCalculator.totalSalaryByDepartment(employees, "Engineering");
+        float averageSalaryByDepartment =
+                DepartmentSalaryCalculator.calculateAverageSalaryByDepartment(employees, "Engineering");
         
-        System.out.println("Total Salary of Employees by Department - " + totalSalaryByDepartment);
+        System.out.println("Average Salary of Employees by Department - " + averageSalaryByDepartment);
         
     }
 }
