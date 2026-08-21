@@ -32,4 +32,21 @@ public class BankAccountCalculator {
         
         return matchingAccounts;
     }
+    
+    // 3. Find accounts whose account number is greater than a given number
+    public static BankAccount[] findAccountsAboveAccountNumber(BankAccount[] accounts, float minimumAccountNumber){
+        BankAccount[] matchingAccounts = new BankAccount[accounts.length];
+        
+        int matchCount = 0;
+        for(int i = 0; i < accounts.length; i++){
+            if(accounts[i] != null){
+                if(accounts[i].getAccountNumber() > minimumAccountNumber){
+                    matchingAccounts[matchCount] = accounts[i];
+                    matchCount++;
+                }
+            }
+        }
+        
+        return matchingAccounts;
+    }
 }
