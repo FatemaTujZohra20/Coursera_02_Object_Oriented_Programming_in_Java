@@ -14,4 +14,22 @@ public class BankAccountCalculator {
         
         return totalBalance;
     }
+    
+    // 2. Find accounts whose balance is greater than a given amount
+    public static BankAccount[] findAccountsAboveBalance(BankAccount[] accounts, float minimumBalance){
+        BankAccount[] matchingAccounts = new BankAccount[accounts.length];
+        
+        int matchCount = 0;
+        
+        for(int i = 0; i < accounts.length; i++){
+            if(accounts[i] != null){
+                if(accounts[i].getAccountBalance() > minimumBalance){
+                    matchingAccounts[matchCount] = accounts[i];
+                    matchCount++;
+                }
+            }
+        }
+        
+        return matchingAccounts;
+    }
 }
