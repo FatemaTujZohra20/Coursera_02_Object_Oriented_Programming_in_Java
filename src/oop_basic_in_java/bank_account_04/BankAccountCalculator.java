@@ -17,15 +17,25 @@ public class BankAccountCalculator {
     
     // 2. Find accounts whose balance is greater than a given amount
     public static BankAccount[] findAccountsAboveBalance(BankAccount[] accounts, float minimumBalance){
-        BankAccount[] matchingAccounts = new BankAccount[accounts.length];
         
         int matchCount = 0;
-        
         for(int i = 0; i < accounts.length; i++){
             if(accounts[i] != null){
                 if(accounts[i].getAccountBalance() > minimumBalance){
-                    matchingAccounts[matchCount] = accounts[i];
                     matchCount++;
+                }
+            }
+        }
+        
+        // Implemented the two-pass filtering pattern
+        BankAccount[] matchingAccounts = new BankAccount[matchCount];
+        
+        int resultCount = 0;
+        for(int i = 0; i < accounts.length; i++){
+            if(accounts[i] != null){
+                if(accounts[i].getAccountBalance() > minimumBalance){
+                    matchingAccounts[resultCount] = accounts[i];
+                    resultCount++;
                 }
             }
         }
@@ -35,14 +45,25 @@ public class BankAccountCalculator {
     
     // 3. Find accounts whose account number is greater than a given number
     public static BankAccount[] findAccountsAboveAccountNumber(BankAccount[] accounts, float minimumAccountNumber){
-        BankAccount[] matchingAccounts = new BankAccount[accounts.length];
         
         int matchCount = 0;
         for(int i = 0; i < accounts.length; i++){
             if(accounts[i] != null){
                 if(accounts[i].getAccountNumber() > minimumAccountNumber){
-                    matchingAccounts[matchCount] = accounts[i];
                     matchCount++;
+                }
+            }
+        }
+        
+        // Implemented the two-pass filtering pattern
+        BankAccount[] matchingAccounts = new BankAccount[matchCount];
+        
+        int resultCount = 0;
+        for(int i = 0; i < accounts.length; i++){
+            if(accounts[i] != null){
+                if(accounts[i].getAccountNumber() > minimumAccountNumber){
+                    matchingAccounts[resultCount] = accounts[i];
+                    resultCount++;
                 }
             }
         }
