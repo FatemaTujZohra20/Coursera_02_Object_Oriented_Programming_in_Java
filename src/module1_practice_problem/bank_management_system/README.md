@@ -17,7 +17,7 @@ This project demonstrates **Object-Oriented Programming (OOP)** concepts in Java
 ## 📂 Project Structure
 
 ```text
-bank_customer_management/
+bank_management_system/
 │
 ├── Customer.java
 ├── CustomerRegistry.java
