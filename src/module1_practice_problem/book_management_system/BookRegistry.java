@@ -14,7 +14,7 @@ public class BookRegistry {
         book1.setPrice(45.0);
         book1.setIsAvailable(true);
         
-        // Set values for books
+        // Set values for second books
         book2.setBookId("B002");
         book2.setTitle("Effective Java");
         book2.setAuthor("Joshua Bloch");
